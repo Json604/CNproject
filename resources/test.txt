@@ -1,0 +1,29 @@
+Multi-threaded HTTP Server - Test File
+========================================
+
+This is a test text file for the Computer Networks assignment HTTP server.
+
+Features being tested:
+- Text file serving with application/octet-stream Content-Type
+- Content-Disposition header for file download
+- Binary file transfer handling
+- Proper MIME type detection
+
+Server Information:
+- Thread Pool: 10 worker threads (configurable)
+- Connection Timeout: 30 seconds
+- Max Requests per Connection: 100
+- Listen Queue: 50 connections
+
+Security Features:
+- Path traversal prevention
+- Host header validation
+- Input validation and sanitization
+- Comprehensive logging
+
+This file should trigger a download when accessed through the browser
+due to the Content-Disposition: attachment header being set.
+
+Generated on: 2024-01-01 12:00:00
+Server Version: 1.0.0
+Python Version: 3.6+

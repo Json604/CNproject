@@ -1,0 +1,46 @@
+{
+  "server_info": {
+    "name": "Multi-threaded HTTP Server",
+    "version": "1.0.0",
+    "python_version": "3.6+",
+    "assignment": "Computer Networks"
+  },
+  "features": [
+    "Multi-threading with thread pool",
+    "HTTP/1.1 and HTTP/1.0 support",
+    "File serving (HTML, images, text)",
+    "JSON upload handling",
+    "Security features",
+    "Connection management",
+    "Comprehensive logging"
+  ],
+  "configuration": {
+    "default_host": "127.0.0.1",
+    "default_port": 8080,
+    "max_threads": 10,
+    "listen_queue": 50,
+    "connection_timeout": 30,
+    "max_requests_per_connection": 100
+  },
+  "security": {
+    "path_traversal_prevention": true,
+    "host_header_validation": true,
+    "input_validation": true,
+    "method_validation": true,
+    "content_type_validation": true
+  },
+  "supported_methods": ["GET", "POST"],
+  "supported_file_types": {
+    "html": "text/html; charset=utf-8",
+    "txt": "application/octet-stream",
+    "png": "application/octet-stream",
+    "jpg": "application/octet-stream",
+    "jpeg": "application/octet-stream",
+    "json": "application/json"
+  },
+  "test_data": {
+    "message": "This JSON file tests the server's ability to serve binary files with proper Content-Disposition headers",
+    "timestamp": "2024-01-01T12:00:00Z",
+    "test_id": "json_serving_test_001"
+  }
+}

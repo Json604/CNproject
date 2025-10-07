@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Server Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            color: #333;
+            display: flex;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .sidebar-header {
+            padding: 0 2rem 2rem;
+            border-bottom: 1px solid #333;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 0 1rem;
+        }
+        
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            color: #ccc;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            background: #333;
+            color: white;
+        }
+        
+        .nav-link.active {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .nav-link i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .nav-badge {
+            background: #ff4444;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            margin-left: auto;
+        }
+        
+        .user-profile {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #333;
+            border-radius: 8px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .user-name {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        
+        .user-username {
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 0;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+        
+        .content-header {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .page-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #4CAF50;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .content-body {
+            padding: 2rem;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: #333;
+            color: white;
+            border-color: #333;
+        }
+        
+        .tab:hover:not(.active) {
+            background: #f8f8f8;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .server-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .server-item {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: #f8f8f8;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .server-item:hover {
+            background: #e8e8e8;
+        }
+        
+        .server-item.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #4CAF50;
+        }
+        
+        .server-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .server-ip {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .server-item.active .server-ip {
+            color: #ccc;
+        }
+        
+        .server-specs {
+            font-size: 0.8rem;
+            color: #888;
+            background: #e0e0e0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .server-item.active .server-specs {
+            background: #333;
+            color: #ccc;
+        }
+        
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .add-server-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .add-server-btn:hover {
+            background: #45a049;
+        }
+        
+        .server-details {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .info-value {
+            color: #333;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        .btn-danger {
+            background: #ff4444;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #cc3333;
+        }
+        
+        .btn-warning {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background: #e68900;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .chart-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chart-placeholder {
+            height: 100px;
+            background: #f8f8f8;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .test-card {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .test-card:hover {
+            background: #4CAF50;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .test-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+        
+        .test-card:hover i {
+            color: white;
+        }
+        
+        .upload-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .upload-form {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        .btn-success {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #45a049;
+        }
+        
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .result.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .result.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <div class="page-title">Server Management Dashboard</div>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                Server Online
+            </div>
+        </div>
+        
+        <div class="content-body">
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active">Overview</div>
+            </div>
+            
+            <!-- Server Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Worker Threads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50</div>
+                    <div class="stat-label">Listen Queue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30s</div>
+                    <div class="stat-label">Connection Timeout</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100</div>
+                    <div class="stat-label">Max Requests/Connection</div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Server List -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-server"></i>
+                        Active servers 1
+                    </div>
+                    <div class="server-list">
+                        <div class="server-item active">
+                            <div class="server-name">HTTP Server</div>
+                            <div class="server-ip">127.0.0.1:8080</div>
+                            <div class="server-specs">10 threads, 50 queue</div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-title">Shutdown servers 0</div>
+                    
+                </div>
+                
+                <!-- Server Details -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-info-circle"></i>
+                        Server Details
+                    </div>
+                    <div class="server-details">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">OS:</span>
+                                <span class="info-value">Python 3.6+</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">CPU:</span>
+                                <span class="info-value">10 threads</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Memory:</span>
+                                <span class="info-value">Dynamic</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Storage:</span>
+                                <span class="info-value">Resources/</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">IP:</span>
+                                <span class="info-value">127.0.0.1:8080</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status:</span>
+                                <span class="info-value" style="color: #4CAF50;">Online</span>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- File Testing Section -->
+            <div class="test-section">
+                <div class="card-header">
+                    <i class="fas fa-download"></i>
+                    File Download Testing
+                </div>
+                <p>Test different file types and download functionality:</p>
+                <div class="test-grid">
+                    <div class="test-card" onclick="downloadFile('/resources/test.txt')">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Text File</h3>
+                        <p>Download test.txt</p>
+                    </div>
+                    <div class="test-card" onclick="downloadFile('/resources/sample.html')">
+                        <i class="fas fa-code"></i>
+                        <h3>HTML File</h3>
+                        <p>View sample.html</p>
+                    </div>
+                    <div class="test-card" onclick="downloadFile('/resources/test.json')">
+                        <i class="fas fa-file-code"></i>
+                        <h3>JSON File</h3>
+                        <p>Download test.json</p>
+                    </div>
+                    <div class="test-card" onclick="downloadFile('/resources/logo.png')">
+                        <i class="fas fa-image"></i>
+                        <h3>PNG Image</h3>
+                        <p>Download logo.png</p>
+                    </div>
+                    <div class="test-card" onclick="downloadFile('/resources/photo.jpg')">
+                        <i class="fas fa-camera"></i>
+                        <h3>JPEG Image</h3>
+                        <p>Download photo.jpg</p>
+                    </div>
+                    <div class="test-card" onclick="downloadFile('/resources/large_image.png')">
+                        <i class="fas fa-file-image"></i>
+                        <h3>Large PNG</h3>
+                        <p>Download large_image.png (>1MB)</p>
+                    </div>
+                    <div class="test-card" onclick="downloadFile('/resources/large_photo.jpg')">
+                        <i class="fas fa-images"></i>
+                        <h3>Large JPEG</h3>
+                        <p>Download large_photo.jpg</p>
+                    </div>
+                    <div class="test-card" onclick="showCurlCommands()">
+                        <i class="fas fa-terminal"></i>
+                        <h3>cURL Commands</h3>
+                        <p>View testing commands</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JSON Upload Section -->
+            <div class="upload-section">
+                <div class="card-header">
+                    <i class="fas fa-upload"></i>
+                    JSON Upload Testing
+                </div>
+                <p>Upload JSON data to test POST functionality:</p>
+                <div class="upload-form">
+                    <div class="form-group">
+                        <label for="jsonInput">JSON Data:</label>
+                        <textarea id="jsonInput" class="form-control" rows="6" placeholder='{"name": "test", "value": 123, "message": "Hello from browser!"}'>{"name": "test", "value": 123, "message": "Hello from browser!", "timestamp": "2024-01-01T12:00:00Z", "features": ["multi-threading", "file-serving", "security"]}</textarea>
+                    </div>
+                    <button class="btn btn-success" onclick="uploadJSON()">
+                        <i class="fas fa-upload"></i> Upload JSON
+                    </button>
+                    <div id="uploadResult" class="result"></div>
+                </div>
+            </div>
+            
+            <!-- cURL Commands Modal -->
+            <div id="curlModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 10px; max-width: 600px; width: 90%;">
+                    <h3>Testing Commands</h3>
+                    <pre style="background: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto; margin: 1rem 0;">
+# Test HTML serving
+curl -H "Host: localhost:8080" http://localhost:8080/
+
+# Test file downloads
+curl -H "Host: localhost:8080" -O http://localhost:8080/resources/test.txt
+curl -H "Host: localhost:8080" -O http://localhost:8080/resources/test.json
+
+# Test HTML file serving
+curl -H "Host: localhost:8080" http://localhost:8080/resources/sample.html
+
+# Test image downloads (binary files)
+curl -H "Host: localhost:8080" -O http://localhost:8080/resources/logo.png
+curl -H "Host: localhost:8080" -O http://localhost:8080/resources/photo.jpg
+
+# Test large image downloads
+curl -H "Host: localhost:8080" -O http://localhost:8080/resources/large_image.png
+curl -H "Host: localhost:8080" -O http://localhost:8080/resources/large_photo.jpg
+
+# Test JSON upload (if working)
+curl -X POST -H "Host: localhost:8080" -H "Content-Type: application/json" \
+  -d '{"test": "data", "number": 42}' http://localhost:8080/upload
+                    </pre>
+                    <button class="btn" onclick="hideCurlCommands()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function escapeHtml(str) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+            return String(str).replace(/[&<>"']/g, s => map[s]);
+        }
+
+        async function uploadJSON() {
+            const jsonInput = document.getElementById('jsonInput');
+            const resultDiv = document.getElementById('uploadResult');
+
+            // Loading state
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading...';
+
+            // Client-side JSON validation first
+            try {
+                JSON.parse(jsonInput.value);
+            } catch (e) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Invalid JSON:</strong> ${escapeHtml(e.message)}
+                `;
+                return;
+            }
+
+            let response;
+            try {
+                response = await fetch('/upload', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: jsonInput.value
+                });
+            } catch (networkErr) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Network error:</strong> ${escapeHtml(networkErr.message)}
+                `;
+                return;
+            }
+
+            const contentType = (response.headers.get('content-type') || '').toLowerCase();
+            if (contentType.includes('application/json')) {
+                const data = await response.json();
+                if (response.ok) {
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Upload successful!</strong><br>
+                        <strong>Filename:</strong> ${escapeHtml(data.filename)}<br>
+                        <strong>Size:</strong> ${escapeHtml(String(data.size))} bytes<br>
+                        <small>File saved to resources/uploads/</small>
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Upload failed:</strong> ${escapeHtml(data.message || `${response.status} ${response.statusText}`)}
+                    `;
+                }
+            } else {
+                // Server returned HTML error page or plain text; surface nicely
+                const text = await response.text();
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Upload failed:</strong> ${response.status} ${response.statusText}<br>
+                    <small>${escapeHtml(text.slice(0, 300))}${text.length > 300 ? '…' : ''}</small>
+                `;
+            }
+        }
+        
+        function downloadFile(path) {
+            window.open(path, '_blank');
+        }
+        
+        function showCurlCommands() {
+            document.getElementById('curlModal').style.display = 'block';
+        }
+        
+        function hideCurlCommands() {
+            document.getElementById('curlModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('curlModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stat cards on load
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.5s ease';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
