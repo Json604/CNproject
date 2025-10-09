@@ -683,3 +683,373 @@
 2025-10-07 12:23:28 [INFO] [Thread-Worker-1] [Conn-[Worker-1] JSON upload saved: resources/uploads/upload_20251007_122328_iw0bka7x.json
 2025-10-07 12:23:58 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection timeout for 127.0.0.1:63683
 2025-10-07 12:23:58 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:63683, requests processed: 1
+2025-10-07 21:28:10 [INFO] [Thread-MainThread] [Conn-Ensured directory exists: resources
+2025-10-07 21:28:10 [INFO] [Thread-MainThread] [Conn-Ensured directory exists: resources/uploads
+2025-10-07 21:28:10 [INFO] [Thread-MainThread] [Conn-Ensured directory exists: logs
+2025-10-07 21:28:10 [INFO] [Thread-MainThread] [Conn-HTTP Server initialized: 127.0.0.1:8080, max_threads=10
+2025-10-07 21:28:10 [ERROR] [Thread-MainThread] [Conn-Failed to start server: [Errno 48] Address already in use
+2025-10-07 21:28:10 [INFO] [Thread-MainThread] [Conn-Stopping HTTP server...
+2025-10-07 21:28:10 [INFO] [Thread-MainThread] [Conn-Waiting for active connections to complete...
+2025-10-07 21:28:12 [INFO] [Thread-MainThread] [Conn-Server stopped. Total requests: 0, Total connections: 0
+2025-10-07 21:28:21 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:64653
+2025-10-07 21:28:21 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 21:28:21 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Processing connection from 127.0.0.1:64653
+2025-10-07 21:28:21 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Received request from 127.0.0.1:64653 (request #1)
+2025-10-07 21:28:21 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 21:28:21 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection closed by client: 127.0.0.1:64653
+2025-10-07 21:28:21 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection completed: 127.0.0.1:64653, requests processed: 1
+2025-10-07 21:28:21 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:64655
+2025-10-07 21:28:21 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 21:28:21 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Processing connection from 127.0.0.1:64655
+2025-10-07 21:28:21 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:64655 (request #1)
+2025-10-07 21:28:21 [WARNING] [Thread-Worker-3] [Conn-[Worker-3] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 21:28:21 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection closed by client: 127.0.0.1:64655
+2025-10-07 21:28:21 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection completed: 127.0.0.1:64655, requests processed: 1
+2025-10-07 21:28:39 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:64661
+2025-10-07 21:28:39 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 21:28:39 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Processing connection from 127.0.0.1:64661
+2025-10-07 21:28:39 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:64661 (request #1)
+2025-10-07 21:28:39 [INFO] [Thread-Worker-3] [Conn-[Worker-3] JSON upload saved: resources/uploads/upload_20251007_212839_hh6o9w69.json
+2025-10-07 21:28:42 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:64661 (request #2)
+2025-10-07 21:28:42 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Serving binary file: resources/test.txt (862 bytes)
+2025-10-07 21:29:12 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection timeout for 127.0.0.1:64661
+2025-10-07 21:29:12 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection completed: 127.0.0.1:64661, requests processed: 2
+2025-10-07 21:29:23 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:64669
+2025-10-07 21:29:23 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 21:29:23 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Processing connection from 127.0.0.1:64669
+2025-10-07 21:29:23 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Received request from 127.0.0.1:64669 (request #1)
+2025-10-07 21:29:23 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Serving binary file: resources/large_image.png (1000074 bytes)
+2025-10-07 21:29:25 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Connection closed by client: 127.0.0.1:64669
+2025-10-07 21:29:25 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Connection completed: 127.0.0.1:64669, requests processed: 1
+2025-10-07 22:20:41 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65151
+2025-10-07 22:20:41 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:41 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Processing connection from 127.0.0.1:65151
+2025-10-07 22:20:41 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Received request from 127.0.0.1:65151 (request #1)
+2025-10-07 22:20:41 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:41 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection closed by client: 127.0.0.1:65151
+2025-10-07 22:20:41 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection completed: 127.0.0.1:65151, requests processed: 1
+2025-10-07 22:20:41 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65153
+2025-10-07 22:20:41 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:41 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Processing connection from 127.0.0.1:65153
+2025-10-07 22:20:41 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Received request from 127.0.0.1:65153 (request #1)
+2025-10-07 22:20:41 [WARNING] [Thread-Worker-6] [Conn-[Worker-6] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:41 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection closed by client: 127.0.0.1:65153
+2025-10-07 22:20:41 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection completed: 127.0.0.1:65153, requests processed: 1
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65155
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Processing connection from 127.0.0.1:65155
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Received request from 127.0.0.1:65155 (request #1)
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection closed by client: 127.0.0.1:65155
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection completed: 127.0.0.1:65155, requests processed: 1
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65157
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:42 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:65157
+2025-10-07 22:20:42 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:65157 (request #1)
+2025-10-07 22:20:42 [WARNING] [Thread-Worker-5] [Conn-[Worker-5] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:42 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection closed by client: 127.0.0.1:65157
+2025-10-07 22:20:42 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:65157, requests processed: 1
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65159
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:42 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Processing connection from 127.0.0.1:65159
+2025-10-07 22:20:42 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Received request from 127.0.0.1:65159 (request #1)
+2025-10-07 22:20:42 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:42 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Connection closed by client: 127.0.0.1:65159
+2025-10-07 22:20:42 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Connection completed: 127.0.0.1:65159, requests processed: 1
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65161
+2025-10-07 22:20:42 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Processing connection from 127.0.0.1:65161
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Received request from 127.0.0.1:65161 (request #1)
+2025-10-07 22:20:42 [WARNING] [Thread-Worker-7] [Conn-[Worker-7] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection closed by client: 127.0.0.1:65161
+2025-10-07 22:20:42 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection completed: 127.0.0.1:65161, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65163
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:65163
+2025-10-07 22:20:43 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:65163 (request #1)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection closed by client: 127.0.0.1:65163
+2025-10-07 22:20:43 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:65163, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65165
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:65165
+2025-10-07 22:20:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:65165 (request #1)
+2025-10-07 22:20:43 [WARNING] [Thread-Worker-4] [Conn-[Worker-4] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection closed by client: 127.0.0.1:65165
+2025-10-07 22:20:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:65165, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65167
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Processing connection from 127.0.0.1:65167
+2025-10-07 22:20:43 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Received request from 127.0.0.1:65167 (request #1)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection closed by client: 127.0.0.1:65167
+2025-10-07 22:20:43 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection completed: 127.0.0.1:65167, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65169
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Processing connection from 127.0.0.1:65169
+2025-10-07 22:20:43 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Received request from 127.0.0.1:65169 (request #1)
+2025-10-07 22:20:43 [WARNING] [Thread-Worker-6] [Conn-[Worker-6] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:43 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection closed by client: 127.0.0.1:65169
+2025-10-07 22:20:43 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection completed: 127.0.0.1:65169, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65171
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:65171
+2025-10-07 22:20:43 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:65171 (request #1)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:65171
+2025-10-07 22:20:43 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:65171, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65173
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:65173
+2025-10-07 22:20:43 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:65173 (request #1)
+2025-10-07 22:20:43 [WARNING] [Thread-Worker-1] [Conn-[Worker-1] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:43 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection closed by client: 127.0.0.1:65173
+2025-10-07 22:20:43 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:65173, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65175
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Processing connection from 127.0.0.1:65175
+2025-10-07 22:20:43 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Received request from 127.0.0.1:65175 (request #1)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:43 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Connection closed by client: 127.0.0.1:65175
+2025-10-07 22:20:43 [INFO] [Thread-Worker-8] [Conn-[Worker-8] Connection completed: 127.0.0.1:65175, requests processed: 1
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65177
+2025-10-07 22:20:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:43 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Processing connection from 127.0.0.1:65177
+2025-10-07 22:20:43 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Received request from 127.0.0.1:65177 (request #1)
+2025-10-07 22:20:43 [WARNING] [Thread-Worker-7] [Conn-[Worker-7] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:43 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection closed by client: 127.0.0.1:65177
+2025-10-07 22:20:43 [INFO] [Thread-Worker-7] [Conn-[Worker-7] Connection completed: 127.0.0.1:65177, requests processed: 1
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65179
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:44 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:65179
+2025-10-07 22:20:44 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:65179 (request #1)
+2025-10-07 22:20:44 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:44 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection closed by client: 127.0.0.1:65179
+2025-10-07 22:20:44 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:65179, requests processed: 1
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65181
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:65181
+2025-10-07 22:20:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:65181 (request #1)
+2025-10-07 22:20:44 [WARNING] [Thread-Worker-4] [Conn-[Worker-4] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection closed by client: 127.0.0.1:65181
+2025-10-07 22:20:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:65181, requests processed: 1
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65183
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:44 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Processing connection from 127.0.0.1:65183
+2025-10-07 22:20:44 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Received request from 127.0.0.1:65183 (request #1)
+2025-10-07 22:20:44 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:44 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection closed by client: 127.0.0.1:65183
+2025-10-07 22:20:44 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection completed: 127.0.0.1:65183, requests processed: 1
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65185
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:44 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Processing connection from 127.0.0.1:65185
+2025-10-07 22:20:44 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Received request from 127.0.0.1:65185 (request #1)
+2025-10-07 22:20:44 [WARNING] [Thread-Worker-6] [Conn-[Worker-6] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:44 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection closed by client: 127.0.0.1:65185
+2025-10-07 22:20:44 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection completed: 127.0.0.1:65185, requests processed: 1
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65187
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:44 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:65187
+2025-10-07 22:20:44 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:65187 (request #1)
+2025-10-07 22:20:44 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:44 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:65187
+2025-10-07 22:20:44 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:65187, requests processed: 1
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65189
+2025-10-07 22:20:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:44 [INFO] [Thread-Worker-9] [Conn-[Worker-9] Processing connection from 127.0.0.1:65189
+2025-10-07 22:20:44 [INFO] [Thread-Worker-9] [Conn-[Worker-9] Received request from 127.0.0.1:65189 (request #1)
+2025-10-07 22:20:44 [WARNING] [Thread-Worker-9] [Conn-[Worker-9] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:44 [INFO] [Thread-Worker-9] [Conn-[Worker-9] Connection closed by client: 127.0.0.1:65189
+2025-10-07 22:20:44 [INFO] [Thread-Worker-9] [Conn-[Worker-9] Connection completed: 127.0.0.1:65189, requests processed: 1
+2025-10-07 22:20:45 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65191
+2025-10-07 22:20:45 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:45 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:65191
+2025-10-07 22:20:45 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:65191 (request #1)
+2025-10-07 22:20:45 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-07 22:20:45 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection closed by client: 127.0.0.1:65191
+2025-10-07 22:20:45 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:65191, requests processed: 1
+2025-10-07 22:20:45 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65193
+2025-10-07 22:20:45 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:20:45 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Processing connection from 127.0.0.1:65193
+2025-10-07 22:20:45 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:65193 (request #1)
+2025-10-07 22:20:45 [WARNING] [Thread-Worker-3] [Conn-[Worker-3] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-07 22:20:45 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection closed by client: 127.0.0.1:65193
+2025-10-07 22:20:45 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection completed: 127.0.0.1:65193, requests processed: 1
+2025-10-07 22:21:02 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:65195
+2025-10-07 22:21:02 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-07 22:21:02 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Processing connection from 127.0.0.1:65195
+2025-10-07 22:21:02 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Received request from 127.0.0.1:65195 (request #1)
+2025-10-07 22:21:02 [INFO] [Thread-Worker-10] [Conn-[Worker-10] JSON upload saved: resources/uploads/upload_20251007_222102_pjvnoa6x.json
+2025-10-07 22:21:27 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Received request from 127.0.0.1:65195 (request #2)
+2025-10-07 22:21:27 [INFO] [Thread-Worker-10] [Conn-[Worker-10] JSON upload saved: resources/uploads/upload_20251007_222127_rw6bnaoi.json
+2025-10-07 22:21:57 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection timeout for 127.0.0.1:65195
+2025-10-07 22:21:57 [INFO] [Thread-Worker-10] [Conn-[Worker-10] Connection completed: 127.0.0.1:65195, requests processed: 2
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-Ensured directory exists: resources
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-Ensured directory exists: resources/uploads
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-Ensured directory exists: logs
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-HTTP Server initialized: 127.0.0.1:8081, max_threads=5
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-Server started on 127.0.0.1:8081
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-Thread pool size: 5
+2025-10-09 07:25:36 [INFO] [Thread-MainThread] [Conn-Server ready to accept connections...
+2025-10-09 07:25:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59121
+2025-10-09 07:25:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:59121
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:59121 (request #1)
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection closed by client: 127.0.0.1:59121
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:59121, requests processed: 1
+2025-10-09 07:25:43 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59127
+2025-10-09 07:25:43 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:59127
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:59127 (request #1)
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Serving HTML file: resources/sample.html (7980 bytes)
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection closed by client: 127.0.0.1:59127
+2025-10-09 07:25:43 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:59127, requests processed: 1
+2025-10-09 07:25:44 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59130
+2025-10-09 07:25:44 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:59130
+2025-10-09 07:25:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:59130 (request #1)
+2025-10-09 07:25:44 [WARNING] [Thread-Worker-4] [Conn-[Worker-4] Invalid request from 127.0.0.1:59130
+2025-10-09 07:25:44 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:59130, requests processed: 0
+2025-10-09 07:25:45 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59134
+2025-10-09 07:25:45 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:45 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:59134
+2025-10-09 07:25:45 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:59134 (request #1)
+2025-10-09 07:25:45 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-09 07:25:45 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection closed by client: 127.0.0.1:59134
+2025-10-09 07:25:45 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:59134, requests processed: 1
+2025-10-09 07:25:45 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59136
+2025-10-09 07:25:45 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:45 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:59136
+2025-10-09 07:25:45 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:59136 (request #1)
+2025-10-09 07:25:45 [WARNING] [Thread-Worker-2] [Conn-[Worker-2] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-09 07:25:45 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:59136
+2025-10-09 07:25:45 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:59136, requests processed: 1
+2025-10-09 07:25:45 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59140
+2025-10-09 07:25:45 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:45 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:59140
+2025-10-09 07:25:45 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:59140 (request #1)
+2025-10-09 07:25:45 [WARNING] [Thread-Worker-4] [Conn-[Worker-4] Invalid request from 127.0.0.1:59140
+2025-10-09 07:25:45 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:59140, requests processed: 0
+2025-10-09 07:25:46 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59148
+2025-10-09 07:25:46 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:46 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:59148
+2025-10-09 07:25:46 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:59148 (request #1)
+2025-10-09 07:25:46 [WARNING] [Thread-Worker-1] [Conn-[Worker-1] Invalid request from 127.0.0.1:59148
+2025-10-09 07:25:46 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:59148, requests processed: 0
+2025-10-09 07:25:46 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59150
+2025-10-09 07:25:46 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:46 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Processing connection from 127.0.0.1:59150
+2025-10-09 07:25:46 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:59150 (request #1)
+2025-10-09 07:25:46 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-09 07:25:46 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection closed by client: 127.0.0.1:59150
+2025-10-09 07:25:46 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection completed: 127.0.0.1:59150, requests processed: 1
+2025-10-09 07:25:46 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59152
+2025-10-09 07:25:46 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:46 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Processing connection from 127.0.0.1:59152
+2025-10-09 07:25:46 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Received request from 127.0.0.1:59152 (request #1)
+2025-10-09 07:25:46 [WARNING] [Thread-Worker-6] [Conn-[Worker-6] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-09 07:25:46 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection closed by client: 127.0.0.1:59152
+2025-10-09 07:25:46 [INFO] [Thread-Worker-6] [Conn-[Worker-6] Connection completed: 127.0.0.1:59152, requests processed: 1
+2025-10-09 07:25:49 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59155
+2025-10-09 07:25:49 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:49 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:59155
+2025-10-09 07:25:49 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:59155 (request #1)
+2025-10-09 07:25:49 [INFO] [Thread-Worker-4] [Conn-[Worker-4] JSON upload saved: resources/uploads/upload_20251009_072549_yezmn4rh.json
+2025-10-09 07:25:49 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection closed by client: 127.0.0.1:59155
+2025-10-09 07:25:49 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:59155, requests processed: 1
+2025-10-09 07:25:49 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59158
+2025-10-09 07:25:49 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:49 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:59158
+2025-10-09 07:25:49 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:59158 (request #1)
+2025-10-09 07:25:49 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-09 07:25:49 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection closed by client: 127.0.0.1:59158
+2025-10-09 07:25:49 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:59158, requests processed: 1
+2025-10-09 07:25:50 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59160
+2025-10-09 07:25:50 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:50 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:59160
+2025-10-09 07:25:50 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:59160 (request #1)
+2025-10-09 07:25:50 [WARNING] [Thread-Worker-2] [Conn-[Worker-2] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-09 07:25:50 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:59160
+2025-10-09 07:25:50 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:59160, requests processed: 1
+2025-10-09 07:25:50 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59164
+2025-10-09 07:25:50 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:50 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:59164
+2025-10-09 07:25:50 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:59164 (request #1)
+2025-10-09 07:25:50 [WARNING] [Thread-Worker-1] [Conn-[Worker-1] Security violation - path validation failed: /etc/passwd - Forbidden - Access outside resources directory
+2025-10-09 07:25:50 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection closed by client: 127.0.0.1:59164
+2025-10-09 07:25:50 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:59164, requests processed: 1
+2025-10-09 07:25:51 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59169
+2025-10-09 07:25:51 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:51 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:59169
+2025-10-09 07:25:51 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:59169 (request #1)
+2025-10-09 07:25:51 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Serving HTML file: resources/index.html (27438 bytes)
+2025-10-09 07:25:51 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection closed by client: 127.0.0.1:59169
+2025-10-09 07:25:51 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:59169, requests processed: 1
+2025-10-09 07:25:51 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59172
+2025-10-09 07:25:51 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:51 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:59172
+2025-10-09 07:25:51 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:59172 (request #1)
+2025-10-09 07:25:51 [WARNING] [Thread-Worker-5] [Conn-[Worker-5] Security violation - path validation failed: /favicon.ico - Forbidden - Access outside resources directory
+2025-10-09 07:25:51 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection closed by client: 127.0.0.1:59172
+2025-10-09 07:25:51 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:59172, requests processed: 1
+2025-10-09 07:25:51 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59174
+2025-10-09 07:25:51 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:51 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:59174
+2025-10-09 07:25:51 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:59174 (request #1)
+2025-10-09 07:25:51 [WARNING] [Thread-Worker-2] [Conn-Host header validation failed: evil.com:8081 (expected: 127.0.0.1:8081)
+2025-10-09 07:25:51 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:59174
+2025-10-09 07:25:51 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:59174, requests processed: 1
+2025-10-09 07:25:52 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59179
+2025-10-09 07:25:52 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:52 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Processing connection from 127.0.0.1:59179
+2025-10-09 07:25:52 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:59179 (request #1)
+2025-10-09 07:25:52 [WARNING] [Thread-Worker-3] [Conn-[Worker-3] Invalid request from 127.0.0.1:59179
+2025-10-09 07:25:52 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection completed: 127.0.0.1:59179, requests processed: 0
+2025-10-09 07:25:55 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59183
+2025-10-09 07:25:55 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:55 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Processing connection from 127.0.0.1:59183
+2025-10-09 07:25:55 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Received request from 127.0.0.1:59183 (request #1)
+2025-10-09 07:25:55 [INFO] [Thread-Worker-4] [Conn-[Worker-4] JSON upload saved: resources/uploads/upload_20251009_072555_k1l55tt7.json
+2025-10-09 07:25:55 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59185
+2025-10-09 07:25:55 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:59185
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:59185 (request #1)
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Serving binary file: resources/test.txt (862 bytes)
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection closed by client: 127.0.0.1:59185
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:59185, requests processed: 1
+2025-10-09 07:25:55 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59190
+2025-10-09 07:25:55 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Processing connection from 127.0.0.1:59190
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Received request from 127.0.0.1:59190 (request #1)
+2025-10-09 07:25:55 [WARNING] [Thread-Worker-1] [Conn-[Worker-1] Invalid request from 127.0.0.1:59190
+2025-10-09 07:25:55 [INFO] [Thread-Worker-1] [Conn-[Worker-1] Connection completed: 127.0.0.1:59190, requests processed: 0
+2025-10-09 07:25:58 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59198
+2025-10-09 07:25:58 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:58 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Processing connection from 127.0.0.1:59198
+2025-10-09 07:25:58 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Received request from 127.0.0.1:59198 (request #1)
+2025-10-09 07:25:58 [WARNING] [Thread-Worker-5] [Conn-[Worker-5] Invalid request from 127.0.0.1:59198
+2025-10-09 07:25:58 [INFO] [Thread-Worker-5] [Conn-[Worker-5] Connection completed: 127.0.0.1:59198, requests processed: 0
+2025-10-09 07:25:59 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59201
+2025-10-09 07:25:59 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:25:59 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:59201
+2025-10-09 07:25:59 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:59201 (request #1)
+2025-10-09 07:25:59 [WARNING] [Thread-Worker-2] [Conn-[Worker-2] Security violation - path validation failed: /nonexistent.html - Forbidden - Access outside resources directory
+2025-10-09 07:25:59 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:59201
+2025-10-09 07:25:59 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:59201, requests processed: 1
+2025-10-09 07:26:02 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59205
+2025-10-09 07:26:02 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:26:02 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Processing connection from 127.0.0.1:59205
+2025-10-09 07:26:02 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Received request from 127.0.0.1:59205 (request #1)
+2025-10-09 07:26:02 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Serving binary file: resources/logo.png (73 bytes)
+2025-10-09 07:26:02 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection closed by client: 127.0.0.1:59205
+2025-10-09 07:26:02 [INFO] [Thread-Worker-2] [Conn-[Worker-2] Connection completed: 127.0.0.1:59205, requests processed: 1
+2025-10-09 07:26:03 [INFO] [Thread-MainThread] [Conn-New connection from 127.0.0.1:59213
+2025-10-09 07:26:03 [INFO] [Thread-MainThread] [Conn-Connection queued for processing. Queue size: 1
+2025-10-09 07:26:03 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Processing connection from 127.0.0.1:59213
+2025-10-09 07:26:03 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Received request from 127.0.0.1:59213 (request #1)
+2025-10-09 07:26:03 [INFO] [Thread-Worker-3] [Conn-[Worker-3] JSON upload saved: resources/uploads/upload_20251009_072603_y6w3cg6q.json
+2025-10-09 07:26:03 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection closed by client: 127.0.0.1:59213
+2025-10-09 07:26:03 [INFO] [Thread-Worker-3] [Conn-[Worker-3] Connection completed: 127.0.0.1:59213, requests processed: 1
+2025-10-09 07:26:25 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection timeout for 127.0.0.1:59183
+2025-10-09 07:26:25 [INFO] [Thread-Worker-4] [Conn-[Worker-4] Connection completed: 127.0.0.1:59183, requests processed: 1
